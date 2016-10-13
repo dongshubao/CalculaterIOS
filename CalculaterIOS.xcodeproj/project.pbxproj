@@ -207,6 +207,7 @@
 				TargetAttributes = {
 					1685A9A21DAE85F50002E035 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8JRHE454MY;
 						ProvisioningStyle = Automatic;
 					};
 					1685A9BB1DAE85F50002E035 = {
@@ -424,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8JRHE454MY;
 				INFOPLIST_FILE = CalculaterIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dongshubao.CalculaterIOS;
@@ -435,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8JRHE454MY;
 				INFOPLIST_FILE = CalculaterIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dongshubao.CalculaterIOS;
@@ -507,6 +510,7 @@
 				1685A9D21DAE85F50002E035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1685A9D31DAE85F50002E035 /* Build configuration list for PBXNativeTarget "CalculaterIOSTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +519,7 @@
 				1685A9D51DAE85F50002E035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1685A9D61DAE85F50002E035 /* Build configuration list for PBXNativeTarget "CalculaterIOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +528,7 @@
 				1685A9D81DAE85F50002E035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
