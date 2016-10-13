@@ -32,11 +32,12 @@
 }
 
 - (IBAction)clickAC:(id)sender {
-    [resultLabel setText:@"2*(1-(3+5-4)*6+66-45*(32-45))+1"];
+    [resultLabel setText:@""];
 }
 
 - (IBAction)calculate:(id)sender {
     NSArray *infixExpression = [self componentsSeparatedByOperators:resultLabel.text];
+    
     NSMutableArray *postfixExpression = [self infixToPostfix:infixExpression];
     
     printf("中缀表达式:");
@@ -44,7 +45,7 @@
         printf("%s ", [each UTF8String]);
     }
     printf("\n");
-
+    
     printf("后缀表达式:");
     for(NSString *each in postfixExpression){
         printf("%s ", [each UTF8String]);
@@ -54,7 +55,7 @@
     NSMutableArray *OPND = [NSMutableArray new];
     
     for (NSString *each in postfixExpression){
-        if ([each doubleValue]) {
+        if (isnumber([each characterAtIndex:0])) {
             [OPND addObject:each];
         }
         else{
@@ -92,6 +93,7 @@
 }
 
 - (NSMutableArray *)infixToPostfix:(NSArray *)infixExpression{
+    //栈内优先数
     NSDictionary *inStackPriority = @{@"#":@"0",
                                       @"(":@"1",
                                       @"*":@"5",
@@ -99,7 +101,7 @@
                                       @"+":@"3",
                                       @"-":@"3",
                                       @")":@"6"};
-    
+    //栈外优先数
     NSDictionary *inComingPriority = @{@"#":@"0",
                                        @"(":@"6",
                                        @"*":@"4",
@@ -111,11 +113,12 @@
     NSMutableArray *suffixList = [NSMutableArray new];
     
     for(NSString *each in infixExpression){
-        if ([each doubleValue]) {
+        if (isnumber([each characterAtIndex:0])) {
             //操作数入栈
             [suffixList addObject:each];
         }
         else{
+            //等于的情况只有栈外@")"，栈内@"("
             while ([[inStackPriority objectForKey:[OPTR lastObject]] intValue] >= [[inComingPriority objectForKey:each] intValue]){
                 //当each为右括号时出栈到第一个左括号为止
                 if ([[OPTR lastObject] isEqual:@"("]){
@@ -144,7 +147,7 @@
     NSString *TEMP = @"";
     for(int i = 0; i < TEXT.length; i++){
         NSString *c = [TEXT substringWithRange:NSMakeRange(i, 1)];
-        if([c intValue])
+        if(isnumber([c characterAtIndex:0]))
             TEMP = [TEMP stringByAppendingString:c];
         else if([c  isEqual: @"("])
             TEMP = [TEMP stringByAppendingString:[[NSString alloc] initWithFormat:@"%@ ", c]];
@@ -152,8 +155,8 @@
             TEMP = [TEMP stringByAppendingString:[[NSString alloc] initWithFormat:@" %@", c]];
         else
             TEMP = [TEMP stringByAppendingString:[[NSString alloc] initWithFormat:@" %@ ", c]];
+        
     }
-    
     return [TEMP componentsSeparatedByString:@" "];
     
     /*
