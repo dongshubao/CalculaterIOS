@@ -59,7 +59,7 @@
             [OPND addObject:each];
         }
         else{
-            int A,B,C;
+            double A,B,C;
             A = [[OPND lastObject] doubleValue];
             [OPND removeLastObject];
             B = [[OPND lastObject] doubleValue];
@@ -85,7 +85,7 @@
                     break;
             }
             
-            [OPND addObject:[[NSString alloc] initWithFormat:@"%d",C]];
+            [OPND addObject:[[NSString alloc] initWithFormat:@"%f",C]];
         }
     }
     
@@ -147,7 +147,7 @@
     NSString *TEMP = @"";
     for(int i = 0; i < TEXT.length; i++){
         NSString *c = [TEXT substringWithRange:NSMakeRange(i, 1)];
-        if(isnumber([c characterAtIndex:0]))
+        if(isnumber([c characterAtIndex:0])|[c isEqual:@"."])
             TEMP = [TEMP stringByAppendingString:c];
         else if([c  isEqual: @"("])
             TEMP = [TEMP stringByAppendingString:[[NSString alloc] initWithFormat:@"%@ ", c]];
