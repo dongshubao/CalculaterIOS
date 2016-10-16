@@ -41,18 +41,18 @@
 
 - (IBAction)calculate:(id)sender {
     NSString *TEXT = resultLabel.text;
-    if ([resultLabel.text isEqual:@""])
+    if ([TEXT isEqual:@""])
         TEXT = @"0";
     
     NSArray *infixExpression = [self componentsSeparatedByOperators:TEXT];
-
-    NSMutableArray *postfixExpression = [self infixToPostfix:infixExpression];
     
     printf("中缀表达式:");
     for(NSString *each in infixExpression){
         printf("%s ", [each UTF8String]);
     }
     printf("\n");
+
+    NSMutableArray *postfixExpression = [self infixToPostfix:infixExpression];
     
     printf("后缀表达式:");
     for(NSString *each in postfixExpression){
@@ -62,7 +62,9 @@
     
     NSMutableArray *OPND = [NSMutableArray new];
     
-    for (NSString *each in postfixExpression){
+    while (![[postfixExpression firstObject] isEqual:@"#"]) {
+    //for (NSString *each in postfixExpression){
+        NSString *each = [postfixExpression firstObject];
         if (isnumber([each characterAtIndex:0])) {
             [OPND addObject:each];
         }
@@ -95,6 +97,7 @@
             
             [OPND addObject:[[NSString alloc] initWithFormat:@"%f",C]];
         }
+        [postfixExpression removeObjectAtIndex:0];
     }
     
     resultLabel.text = [OPND objectAtIndex:0];
@@ -120,36 +123,35 @@
     NSMutableArray *OPTR = [NSMutableArray new]; [OPTR addObject:@"#"]; //运算符栈
     NSMutableArray *suffixList = [NSMutableArray new];
     
-    for(NSString *each in infixExpression){
+    for (NSString *each in infixExpression){
         if (isnumber([each characterAtIndex:0])) {
             //操作数入栈
             [suffixList addObject:each];
         }
         else{
-            //等于的情况只有栈外@")"，栈内@"("
+            //等于的情况只有栈外@")"，栈内@"(" 和 栈外@"#"，栈内@"#"
             while ([[inStackPriority objectForKey:[OPTR lastObject]] intValue] >= [[inComingPriority objectForKey:each] intValue]){
                 //当each为右括号时出栈到第一个左括号为止
                 if ([[OPTR lastObject] isEqual:@"("]){
                     [OPTR removeLastObject];
                     break;
                 }
-                [suffixList addObject:[OPTR lastObject]];
-                [OPTR removeLastObject];
+                //弹出符号栈所有剩余符号为止
+                else if ([[OPTR lastObject] isEqual:@"#"]){
+                    [suffixList addObject:[OPTR lastObject]];
+                    break;
+                }
+                else{
+                    [suffixList addObject:[OPTR lastObject]];
+                    [OPTR removeLastObject];
+                }
             }
             if (![each isEqual:@")"])
                 [OPTR addObject:each];
         }
     }
-    
-    //弹出符号栈
-    while ([OPTR count] != 1){
-        [suffixList addObject:[OPTR lastObject]];
-        [OPTR removeLastObject];
-    }
-    
     return suffixList;
 }
-
 
 - (NSArray *)componentsSeparatedByOperators:(NSString *)TEXT{
     NSString *TEMP = @"";
@@ -163,48 +165,8 @@
             TEMP = [TEMP stringByAppendingString:[[NSString alloc] initWithFormat:@" %@", c]];
         else
             TEMP = [TEMP stringByAppendingString:[[NSString alloc] initWithFormat:@" %@ ", c]];
-        
     }
-    return [TEMP componentsSeparatedByString:@" "];
-    
-    /*
-     NSString *TEXT = resultLabel.text;
-     NSMutableArray *LIST = [NSMutableArray new];
-     
-     
-     
-     while(![TEXT isEqual:@""]){
-     NSLog(@"TEXT:%@",TEXT);
-     char firstChar = [TEXT characterAtIndex:0];
-     if (!isnumber(firstChar)) {
-     [LIST addObject:[NSString stringWithCString:&firstChar encoding:NSUTF8StringEncoding]]; //编码不匹配
-     TEXT = [TEXT stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:@""];
-     }
-     else{
-     int i;
-     for(i = 0; i < TEXT.length; i++)
-     if (!isnumber([TEXT characterAtIndex:i]))
-     break;
-     if (i == TEXT.length){
-     [LIST addObject:TEXT];
-     TEXT = @"";
-     }
-     else{
-     char c = [TEXT characterAtIndex:i];
-     [LIST addObject:[TEXT substringWithRange:NSMakeRange(0, i)]];
-     [LIST addObject:[NSString stringWithCString:&c encoding:NSUTF8StringEncoding]];
-     TEXT = [TEXT stringByReplacingCharactersInRange:NSMakeRange(0, i + 1) withString:@""];
-     }
-     }
-     }
-     
-     NSLog(@"%ld ",[LIST count]);
-     for(NSString *each in LIST)
-     NSLog(@"%@ ",each);
-     */
+    return [[TEMP stringByAppendingString:@" #"] componentsSeparatedByString:@" "];
 }
-
-
-
 
 @end
