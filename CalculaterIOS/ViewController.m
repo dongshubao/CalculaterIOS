@@ -29,6 +29,10 @@
 
 - (IBAction)clickNumber:(UIButton *)sender {
     resultLabel.text = [resultLabel.text stringByAppendingString:sender.titleLabel.text];
+    sender.backgroundColor = [UIColor lightGrayColor];
+}
+- (IBAction)buttonTouchDown:(UIButton *)sender {
+    sender.backgroundColor = [UIColor redColor];
 }
 
 - (IBAction)clickAC:(id)sender {
@@ -36,8 +40,12 @@
 }
 
 - (IBAction)calculate:(id)sender {
-    NSArray *infixExpression = [self componentsSeparatedByOperators:resultLabel.text];
+    NSString *TEXT = resultLabel.text;
+    if ([resultLabel.text isEqual:@""])
+        TEXT = @"0";
     
+    NSArray *infixExpression = [self componentsSeparatedByOperators:TEXT];
+
     NSMutableArray *postfixExpression = [self infixToPostfix:infixExpression];
     
     printf("中缀表达式:");
