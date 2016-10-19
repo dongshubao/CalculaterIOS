@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "CalculateModel.h"
-#import "AboutViewController.h"
 
-@interface ViewController : UIViewController <UIPopoverPresentationControllerDelegate>
+@interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 

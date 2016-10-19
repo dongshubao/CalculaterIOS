@@ -47,22 +47,4 @@
     sender.backgroundColor = [UIColor orangeColor];
 }
 
-
-#pragma mark - Navigation
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqual:@"about"]){
-        AboutViewController *pop = segue.destinationViewController;
-        pop.modalPresentationStyle = UIModalPresentationPopover;
-        pop.popoverPresentationController.delegate = self;
-    }
-}
-
-- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller
-{
-    return UIModalPresentationNone;
-}
-
-
-
 @end
