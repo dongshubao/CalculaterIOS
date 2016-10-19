@@ -29,22 +29,25 @@
 
 - (IBAction)clickNumber:(UIButton *)sender {
     resultLabel.text = [resultLabel.text stringByAppendingString:sender.titleLabel.text];
-    sender.backgroundColor = [UIColor lightGrayColor];
+    sender.maskView = nil;
 }
 - (IBAction)buttonTouchDown:(UIButton *)sender {
-    sender.backgroundColor = [UIColor redColor];
+    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight]];
+    visualEffectView.frame = sender.bounds;
+    visualEffectView.alpha = 1;
+    sender.maskView = visualEffectView;
 }
 
 - (IBAction)clickAC:(UIButton *)sender {
     [resultLabel setText:@""];
-    sender.backgroundColor = [UIColor lightGrayColor];
+    sender.maskView = nil;
 }
 
 - (IBAction)calculate:(UIButton *)sender {
-    
     resultLabel.text = [CalculateModel resolveWithString:resultLabel.text];
-    
-    sender.backgroundColor = [UIColor orangeColor];
+    sender.maskView = nil;
 }
+
+- (UIStatusBarStyle)preferredStatusBarStyle {     return UIStatusBarStyleLightContent; }
 
 @end

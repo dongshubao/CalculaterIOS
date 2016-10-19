@@ -22,7 +22,10 @@
                                 <frame key="frameInset" minY="168" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="AC"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="AC">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Qib-3q-JKd"/>
                                     <action selector="clickAC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kjb-Ii-UDR"/>
@@ -32,7 +35,10 @@
                                 <frame key="frameInset" minX="80" minY="168" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="("/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="(">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="68y-ne-ZCv"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NAH-Cw-zK1"/>
@@ -42,7 +48,10 @@
                                 <frame key="frameInset" minX="160" minY="168" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title=")"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title=")">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="YFe-xW-Hrp"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WdQ-A8-c3I"/>
@@ -51,8 +60,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUU-TY-oZq">
                                 <frame key="frameInset" minX="240" minY="168" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="/"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="/">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="7NS-vi-ohe"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y2J-te-R9R"/>
@@ -62,7 +74,10 @@
                                 <frame key="frameInset" minY="248" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="7"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="7">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="jGz-iT-CD6"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2MT-kK-7eX"/>
@@ -72,7 +87,10 @@
                                 <frame key="frameInset" minX="80" minY="248" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="8"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="8">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="lDG-5N-ihQ"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vw2-yU-5dT"/>
@@ -82,7 +100,10 @@
                                 <frame key="frameInset" minX="160" minY="248" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="9"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="9">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="BH0-90-0wH"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bmh-UL-SeO"/>
@@ -91,8 +112,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsH-gg-Loc">
                                 <frame key="frameInset" minX="240" minY="248" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="*"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="*">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="gyL-Ig-2bl"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bce-ad-90P"/>
@@ -102,7 +126,10 @@
                                 <frame key="frameInset" minY="328" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="4"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="lSC-Ww-Yy1"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hTQ-Dz-Z0y"/>
@@ -112,7 +139,10 @@
                                 <frame key="frameInset" minX="80" minY="328" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="5">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="tpI-ai-rJA"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EkV-R4-aQ9"/>
@@ -122,7 +152,10 @@
                                 <frame key="frameInset" minX="160" minY="328" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="6"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="6">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="WNn-d3-XCG"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wgj-Vw-j2J"/>
@@ -131,8 +164,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwq-d9-Okr">
                                 <frame key="frameInset" minX="240" minY="328" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="-"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="fa9-H9-up6"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s9n-Lo-Upc"/>
@@ -142,7 +178,10 @@
                                 <frame key="frameInset" minY="408" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="1"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="ONn-5t-Jfq"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zlh-6E-bYK"/>
@@ -152,7 +191,10 @@
                                 <frame key="frameInset" minX="80" minY="408" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="2"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Q4o-eC-Q7L"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m5w-0y-pi8"/>
@@ -162,7 +204,10 @@
                                 <frame key="frameInset" minX="160" minY="408" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="3"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="1xt-AL-Aif"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wAh-0z-7Wx"/>
@@ -171,8 +216,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFC-64-DNJ">
                                 <frame key="frameInset" minX="240" minY="408" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="+"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="hvG-as-Zsr"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g0j-BX-K6p"/>
@@ -182,7 +230,10 @@
                                 <frame key="frameInset" minY="488" width="159" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="XW9-7U-isV"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zS7-DH-Qzs"/>
@@ -192,7 +243,10 @@
                                 <frame key="frameInset" minX="160" minY="488" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="."/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title=".">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="a4n-Ad-OCY"/>
                                     <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5oM-FM-dod"/>
@@ -202,22 +256,24 @@
                                 <frame key="frameInset" minX="240" minY="488" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="="/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="=">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="dxu-zr-k7D"/>
                                     <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z55-xQ-D4B"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dbf-SA-ovh">
-                                <frame key="frameInset" minX="-2" minY="28" width="321" height="139"/>
+                                <frame key="frameInset" minX="-2" minY="76" width="321" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="65"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="resultLabel" destination="dbf-SA-ovh" id="1Wy-iA-abo"/>
