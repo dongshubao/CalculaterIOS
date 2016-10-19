@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CalculateModel.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 

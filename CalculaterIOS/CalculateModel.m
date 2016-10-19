@@ -24,6 +24,10 @@
     NSString *each = infixExpression[i];
     
     while (![each isEqual:@"#"] || ![[OPTR lastObject] isEqual:@"#"]) {
+        
+        if ([each  isEqual: @""])
+            return nil;
+        
         if (isnumber([each characterAtIndex:0])) {
             //操作数入栈
             
@@ -97,7 +101,14 @@
 + (NSString *)resolveWithString:(NSString *)TEXT{
     if ([TEXT isEqual:@""])
         TEXT = @"0";
+    
     NSArray *infixExpression = [self componentsSeparatedByOperators:TEXT];
-    return [self evaluateExpression:infixExpression];
+    
+    NSString *result = [self evaluateExpression:infixExpression];
+    
+    if (result != nil)
+        return result;
+    else
+        return @"错误";
 }
 @end
