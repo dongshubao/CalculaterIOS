@@ -79,7 +79,7 @@
     else if ([theta isEqual:@"/"])
         C = B / A;
     
-    return [[NSString alloc] initWithFormat:@"%f",C];
+    return [[NSNumber numberWithDouble:C] stringValue];//[[NSString alloc] initWithFormat:@"%f",C];
 }
 
 + (NSArray *)componentsSeparatedByOperators:(NSString *)TEXT{
