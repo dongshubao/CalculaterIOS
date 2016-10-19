@@ -43,6 +43,7 @@
 - (IBAction)clickNumber:(UIButton *)sender {
     resultLabel.text = [resultLabel.text stringByAppendingString:sender.titleLabel.text];
     sender.maskView = nil;
+    AudioServicesPlaySystemSound(1104);
 }
 
 
@@ -57,12 +58,14 @@
 - (IBAction)clickAC:(UIButton *)sender {
     [resultLabel setText:@""];
     sender.maskView = nil;
+    AudioServicesPlaySystemSound(1104);
 }
 
 
 - (IBAction)calculate:(UIButton *)sender {
     resultLabel.text = [CalculateModel resolveWithString:resultLabel.text];
     sender.maskView = nil;
+    AudioServicesPlaySystemSound(1104);
 }
 
 
