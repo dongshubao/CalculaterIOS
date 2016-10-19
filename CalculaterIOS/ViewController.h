@@ -10,7 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "CalculateModel.h"
 
-@interface ViewController : UIViewController <UIGestureRecognizerDelegate>
+@interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 

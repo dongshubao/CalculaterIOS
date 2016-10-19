@@ -23,6 +23,15 @@
     [leftSwipe setDirection:UISwipeGestureRecognizerDirectionLeft];
     resultLabel.userInteractionEnabled = YES;
     [resultLabel addGestureRecognizer:leftSwipe];
+    
+    for(id item in self.view.subviews){
+        if ([item class] == [UIButton class]) {
+            [item addTarget:self action:@selector(buttonTouchDownEffect:) forControlEvents:UIControlEventTouchDown];
+            [item addTarget:self action:@selector(buttonTouchUpInsideEffect:) forControlEvents:UIControlEventTouchUpInside];
+            [item addTarget:self action:@selector(buttonTouchUpInsideEffect:) forControlEvents:UIControlEventTouchUpOutside];
+        }
+    }
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -42,33 +51,28 @@
 
 - (IBAction)clickNumber:(UIButton *)sender {
     resultLabel.text = [resultLabel.text stringByAppendingString:sender.titleLabel.text];
-    sender.maskView = nil;
-    AudioServicesPlaySystemSound(1104);
-}
-
-
-- (IBAction)buttonTouchDown:(UIButton *)sender {
-    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight]];
-    visualEffectView.frame = sender.bounds;
-    visualEffectView.alpha = 1;
-    sender.maskView = visualEffectView;
 }
 
 
 - (IBAction)clickAC:(UIButton *)sender {
     [resultLabel setText:@""];
-    sender.maskView = nil;
-    AudioServicesPlaySystemSound(1104);
 }
 
 
 - (IBAction)calculate:(UIButton *)sender {
     resultLabel.text = [CalculateModel resolveWithString:resultLabel.text];
-    sender.maskView = nil;
+}
+
+- (void)buttonTouchDownEffect:(UIButton *)sender {
+    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight]];
+    visualEffectView.frame = sender.bounds;
+    visualEffectView.alpha = 1;
+    sender.maskView = visualEffectView;
     AudioServicesPlaySystemSound(1104);
 }
 
+- (void)buttonTouchUpInsideEffect:(UIButton *)sender { sender.maskView = nil; }
 
-- (UIStatusBarStyle)preferredStatusBarStyle {     return UIStatusBarStyleLightContent; }
+- (UIStatusBarStyle)preferredStatusBarStyle { return UIStatusBarStyleLightContent; }
 
 @end

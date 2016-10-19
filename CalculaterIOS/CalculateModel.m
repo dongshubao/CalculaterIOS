@@ -28,10 +28,9 @@
         if ([each  isEqual: @""])
             return nil;
         
-        if (isnumber([each characterAtIndex:0])) {
-            //操作数入栈
-            
-            [OPND addObject:each];
+        if ([self isNumberString:each]) {
+            //格式化操作数并入栈
+            [OPND addObject:[[NSNumber numberWithDouble:[each doubleValue]] stringValue]];
             each = infixExpression[++i];
         }
         else{
@@ -63,6 +62,23 @@
         }
     }
     return [OPND lastObject];
+}
+
++ (BOOL)isNumberString:(NSString *)string{
+    NSScanner* scan = [NSScanner scannerWithString:string];
+
+    if ([scan scanInt:NULL] && [scan isAtEnd])
+        return true;
+    
+    scan = [NSScanner scannerWithString:string];
+    if ([scan scanFloat:NULL] && [scan isAtEnd])
+        return true;
+    
+    scan = [NSScanner scannerWithString:string];
+    if ([scan scanDouble:NULL] && [scan isAtEnd])
+        return true;
+    
+    return false;
 }
 
 + (NSString *)operate:(NSString *)value1 :(NSString *)theta :(NSString *)value2{
