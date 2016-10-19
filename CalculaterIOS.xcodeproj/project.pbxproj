@@ -15,6 +15,7 @@
 		1685A9B61DAE85F50002E035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1685A9B41DAE85F50002E035 /* LaunchScreen.storyboard */; };
 		1685A9C11DAE85F50002E035 /* CalculaterIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1685A9C01DAE85F50002E035 /* CalculaterIOSTests.m */; };
 		1685A9CC1DAE85F50002E035 /* CalculaterIOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1685A9CB1DAE85F50002E035 /* CalculaterIOSUITests.m */; };
+		16DCDE101DB51C2300BC06B8 /* CalculateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DCDE0F1DB51C2300BC06B8 /* CalculateModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		1685A9C71DAE85F50002E035 /* CalculaterIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculaterIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1685A9CB1DAE85F50002E035 /* CalculaterIOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculaterIOSUITests.m; sourceTree = "<group>"; };
 		1685A9CD1DAE85F50002E035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16DCDE0E1DB51C2300BC06B8 /* CalculateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateModel.h; sourceTree = "<group>"; };
+		16DCDE0F1DB51C2300BC06B8 /* CalculateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				1685A9AA1DAE85F50002E035 /* AppDelegate.m */,
 				1685A9AC1DAE85F50002E035 /* ViewController.h */,
 				1685A9AD1DAE85F50002E035 /* ViewController.m */,
+				16DCDE0E1DB51C2300BC06B8 /* CalculateModel.h */,
+				16DCDE0F1DB51C2300BC06B8 /* CalculateModel.m */,
 				1685A9AF1DAE85F50002E035 /* Main.storyboard */,
 				1685A9B21DAE85F50002E035 /* Assets.xcassets */,
 				1685A9B41DAE85F50002E035 /* LaunchScreen.storyboard */,
@@ -274,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16DCDE101DB51C2300BC06B8 /* CalculateModel.m in Sources */,
 				1685A9AE1DAE85F50002E035 /* ViewController.m in Sources */,
 				1685A9AB1DAE85F50002E035 /* AppDelegate.m in Sources */,
 				1685A9A81DAE85F50002E035 /* main.m in Sources */,
