@@ -27,8 +27,8 @@
     for(id item in self.view.subviews){
         if ([item class] == [UIButton class]) {
             [item addTarget:self action:@selector(buttonTouchDownEffect:) forControlEvents:UIControlEventTouchDown];
-            [item addTarget:self action:@selector(buttonTouchUpInsideEffect:) forControlEvents:UIControlEventTouchUpInside];
-            [item addTarget:self action:@selector(buttonTouchUpInsideEffect:) forControlEvents:UIControlEventTouchUpOutside];
+            [item addTarget:self action:@selector(buttonTouchUpEffect:) forControlEvents:UIControlEventTouchUpInside];
+            [item addTarget:self action:@selector(buttonTouchUpEffect:) forControlEvents:UIControlEventTouchUpOutside];
         }
     }
     
@@ -71,7 +71,7 @@
     AudioServicesPlaySystemSound(1104);
 }
 
-- (void)buttonTouchUpInsideEffect:(UIButton *)sender { sender.maskView = nil; }
+- (void)buttonTouchUpEffect:(UIButton *)sender { sender.maskView = nil; }
 
 - (UIStatusBarStyle)preferredStatusBarStyle { return UIStatusBarStyleLightContent; }
 
